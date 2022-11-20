@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+*{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    text-transform: uppercase;
+    background-color: black;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+a:visited{
+    color: rgb(253, 253, 253);
+}
+
+.bar{
+    width: 20%;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    text-align: right;
+}
+
+a:hover{
+    color: rgb(255, 0, 0);
+    
+}
+
+.dc{
+    margin-right: 15px
+}
+
+.dc:hover{
+    transform: scale(1.2);
+}
+.portfolio:hover{
+    transform: scale(1.2);
+}
+.contacts:hover{
+    transform: scale(1.2);
+}
+
+.rtname{
+    border-radius: 50%;
+    color: white;
+    text-align: right;
+    margin-right: 7%;
+    font-family: 'Michroma', sans-serif;
+}
+
+.skills{
+    width: 100%;
+    max-width: 600px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skill-name{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.skill-bar{
+    height: 14px;
+    background: #282828;
+    border-radius: 3px;
+}
+
+.skill-per{
+    height: 14px;
+    background: #d13639;
+    border-radius: 3px;
+    position: relative;
+    animation: fillBars 2.5s 1;
+}
+.skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background: #f1f1f1;
+    border-radius: 4px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.skill-per::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #f1f1f1;
+    top: -20px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+}
+
+@keyframes fillBars{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
